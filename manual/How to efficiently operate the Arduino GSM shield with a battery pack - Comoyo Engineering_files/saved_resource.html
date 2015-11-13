@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<!-- saved from url=(0489)http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default -->
+<html lang="en" dir="ltr" class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        
+    </style>
+
+<link rel="stylesheet" href="lounge.cab89d72ef1d1c597e09c5536634ab7e.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="remote/config" src="config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common.bundle" src="common.bundle.feb8f4b4e754cec72a5ba1febe1cc3ea.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lounge.bundle" src="lounge.bundle.fb1fb1405cdafd6d8778283e3b3d8ab7.js"></script><style id="css_1447409038166"></style><!--<base target="_parent">--><base href="." target="_parent"><link rel="preconnect" href="http://tempest.services.disqus.com/"><link rel="dns-prefetch" href="http://tempest.services.disqus.com/"><link rel="stylesheet" href="discovery.82e4011d3fa0aabedc6bc7695005ebfe.css"><script src="event.js" async="" charset="UTF-8"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ga" src="ga(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="discovery/main" src="discovery.bundle.4597a89d98d18738b9c28818716dfbf0.js"></script></head>
+<body>
+    
+
+    
+    <!--[if lt IE 10]><p style="color: #fff; background-color: #f05f70; padding: 10px; margin-top: 20px;">
+        You're using a browser that Disqus plans to stop supporting soon. For more information, visit our list of 
+        <a href="https://help.disqus.com/customer/portal/articles/466228-which-browsers-does-disqus-work-with-" style="color: #fff; text-decoration: underline;">supported browsers</a>
+        and consider upgrading.
+    </p><![endif]-->
+    <div id="error" style="display:none; text-align: center">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"features":{},"forum":{"category":null,"description":"","founder":"27303869","settings":{"supportLevel":0,"adsDRNativeEnabled":false,"disable3rdPartyTrackers":false,"moderatorText":"","ssoRequired":false,"linkAffiliationEnabled":true,"hasCustomAvatar":false,"organicDiscoveryEnabled":false,"colorScheme":"auto","discoveryMax":false,"discoverySettingsUrl":"https://comoyolabsblog.disqus.com/admin/settings/ads/","adsVideoEnabled":false,"allowAnonPost":true,"allowMedia":true,"promotedDiscoveryEnabled":false,"allowAnonVotes":false,"mustVerify":false,"mustVerifyEmail":false,"discoveryVariant":null,"adsBannerEnabled":false,"audienceSyncEnabled":false,"typeface":"auto","discoveryLocked":false,"discoveryThumbnailsEnabled":false,"isVIP":false},"url":"http://blog.comoyo.com","guidelines":null,"favicon":{"permalink":"http://disqus.com/api/forums/favicons/comoyolabsblog.jpg","cache":"//a.disquscdn.com/1446595513/images/favicon-default.png"},"language":"en","avatar":{"small":{"permalink":"http://disqus.com/api/forums/avatars/comoyolabsblog.jpg?size=32","cache":"//a.disquscdn.com/1446595513/images/noavatar32.png"},"large":{"permalink":"http://disqus.com/api/forums/avatars/comoyolabsblog.jpg?size=92","cache":"//a.disquscdn.com/1446595513/images/noavatar92.png"}},"pk":"1475894","signedUrl":"http://disq.us/?url=http%3A%2F%2Fblog.comoyo.com&key=7bzYWzbwDkfuQ9TKm28w0w","raw_guidelines":null,"id":"comoyolabsblog","channel":null,"name":"Comoyo Labs Blog"}}</script>
+
+    
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":6,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1416207310,"posts":[{"forum":"comoyolabsblog","parent":null,"isApproved":true,"author":{"username":"oskarrisberg","about":"","name":"Oskar Risberg","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2375779999999998,"profileUrl":"https://disqus.com/by/oskarrisberg/","url":"","reputation":1.2375779999999998,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-05-24T12:14:17","id":"52030666","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/oskarrisberg.jpg","cache":"//a.disquscdn.com/uploads/users/5203/666/avatar32.jpg?1369397658"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/oskarrisberg.jpg","cache":"//a.disquscdn.com/uploads/users/5203/666/avatar92.jpg?1369397658","large":{"permalink":"http://disqus.com/api/users/avatars/oskarrisberg.jpg","cache":"//a.disquscdn.com/uploads/users/5203/666/avatar92.jpg?1369397658"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"So how much of a change did this actually make?","createdAt":"2013-08-09T12:09:40","id":"994311762","thread":"1588426074","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":13,"isEdited":false,"message":"\u003cp>So how much of a change did this actually make?\u003c/p>","isSpam":false,"isHighlighted":false,"points":13},{"forum":"comoyolabsblog","parent":994311762,"isApproved":true,"author":{"username":"christiandtuen","about":"","name":"Christian D. Tuen","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2363009999999999,"profileUrl":"https://disqus.com/by/christiandtuen/","url":"http://www.christiandt.com/","reputation":1.2363009999999999,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.christiandt.com%2F&key=D6PVvIHhZ7pSAqCEYN-EoA","isPrimary":true,"joinedAt":"2013-08-09T21:03:06","id":"66623423","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/christiandtuen.jpg","cache":"//a.disquscdn.com/uploads/users/6662/3423/avatar32.jpg?1376082188"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/christiandtuen.jpg","cache":"//a.disquscdn.com/uploads/users/6662/3423/avatar92.jpg?1376082188","large":{"permalink":"http://disqus.com/api/users/avatars/christiandtuen.jpg","cache":"//a.disquscdn.com/uploads/users/6662/3423/avatar92.jpg?1376082188"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"I haven't had the time to test the actual real life battery life for all this combined yet, but just turning off the modem and making the Arduino sleep gave us at least 50% more lifetime. That is including constant 5V on the RX pin and LEDs lit. With all these techniques combined, the sensor uses ~43mA with the 8 AA batteries/12V source (Alcaline AA has a capacity of about 2890mAH). Even though the overall battery life is not great, the percentage gained by some simple changes to the code is actually quite a lot.","createdAt":"2013-08-09T21:23:28","id":"994984707","thread":"1588426074","depth":1,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>I haven't had the time to test the actual real life battery life for all this combined yet, but just turning off the modem and making the Arduino sleep gave us at least 50% more lifetime. That is including constant 5V on the RX pin and LEDs lit. With all these techniques combined, the sensor uses ~43mA with the 8 AA batteries/12V source (Alcaline AA has a capacity of about 2890mAH). Even though the overall battery life is not great, the percentage gained by some simple changes to the code is actually quite a lot.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"comoyolabsblog","parent":994984707,"isApproved":true,"author":{"name":"Charlie","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1446595513/images/noavatar32.png","cache":"//a.disquscdn.com/1446595513/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1446595513/images/noavatar92.png","cache":"//a.disquscdn.com/1446595513/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1446595513/images/noavatar92.png","cache":"//a.disquscdn.com/1446595513/images/noavatar92.png"},"signedUrl":"","isAnonymous":true},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Hi Christian,\n\nHave you worked out how much power you ended up drawing? I'm looking to power an Arduino with a GSM shield with a LiPo battery and solar panel. I read that the GSM shield requires peaks of up to 2A current.","createdAt":"2014-06-18T00:06:00","id":"1440293024","thread":"1588426074","depth":2,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>Hi Christian,\u003c/p>\u003cp>Have you worked out how much power you ended up drawing? I'm looking to power an Arduino with a GSM shield with a LiPo battery and solar panel. I read that the GSM shield requires peaks of up to 2A current.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"comoyolabsblog","parent":1440293024,"isApproved":true,"author":{"username":"christiandtuen","about":"","name":"Christian D. Tuen","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2363009999999999,"profileUrl":"https://disqus.com/by/christiandtuen/","url":"http://www.christiandt.com/","reputation":1.2363009999999999,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.christiandt.com%2F&key=D6PVvIHhZ7pSAqCEYN-EoA","isPrimary":true,"joinedAt":"2013-08-09T21:03:06","id":"66623423","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/christiandtuen.jpg","cache":"//a.disquscdn.com/uploads/users/6662/3423/avatar32.jpg?1376082188"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/christiandtuen.jpg","cache":"//a.disquscdn.com/uploads/users/6662/3423/avatar92.jpg?1376082188","large":{"permalink":"http://disqus.com/api/users/avatars/christiandtuen.jpg","cache":"//a.disquscdn.com/uploads/users/6662/3423/avatar92.jpg?1376082188"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"The 2A current peak is normally only in bursts, and there is a capacitor (orange) on the shield that should handle the current peaks. So you will most likely not experience 2A drawn for long durations of time, but it is still possible that you will. The highest peak we experienced when measuring the total current drawn by the arduino+shield was 380mA, but this will likely vary under different conditions. The power drawn varies with what frequencies are used, and we did some testing on DCS (1800MHz) and E-GSM (900MHz). We found that for DCS the average peak value was about 1W (200mA at 5V), while for E-GSM it was 1.35W (270mA at 5V). Again, your results may wary. The peak values are mostly experienced during connection to the network, and are normally much lower. Amount of sun, time connected to the network, signal strength, frequency, amount of data transmitted, speed of the connection etc. will all impact how long you are able to run your project. \nFeel free to reply with a link to your project if you want to share your experiences.","createdAt":"2014-06-19T08:17:59","id":"1443465103","thread":"1588426074","depth":3,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>The 2A current peak is normally only in bursts, and there is a capacitor (orange) on the shield that should handle the current peaks. So you will most likely not experience 2A drawn for long durations of time, but it is still possible that you will. The highest peak we experienced when measuring the total current drawn by the arduino+shield was 380mA, but this will likely vary under different conditions. The power drawn varies with what frequencies are used, and we did some testing on DCS (1800MHz) and E-GSM (900MHz). We found that for DCS the average peak value was about 1W (200mA at 5V), while for E-GSM it was 1.35W (270mA at 5V). Again, your results may wary. The peak values are mostly experienced during connection to the network, and are normally much lower. Amount of sun, time connected to the network, signal strength, frequency, amount of data transmitted, speed of the connection etc. will all impact how long you are able to run your project. \u003cbr>Feel free to reply with a link to your project if you want to share your experiences.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"comoyolabsblog","parent":null,"isApproved":true,"author":{"username":"christophergosnell","about":"Engineer, MAKEr, FLL Robotics Mentor","name":"Christopher Gosnell","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.269118,"profileUrl":"https://disqus.com/by/christophergosnell/","url":"","reputation":1.269118,"location":"Washington, PA","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-06-28T13:48:50","id":"59562498","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/christophergosnell.jpg","cache":"//a.disquscdn.com/uploads/users/5956/2498/avatar32.jpg?1372427332"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/christophergosnell.jpg","cache":"//a.disquscdn.com/uploads/users/5956/2498/avatar92.jpg?1372427332","large":{"permalink":"http://disqus.com/api/users/avatars/christophergosnell.jpg","cache":"//a.disquscdn.com/uploads/users/5956/2498/avatar92.jpg?1372427332"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"I think you hit the nail on the head when you commented that the voltage regulator was a major culprit.  I think that a 7805 isn't too much better than routing a zener across the power supply.  How about using a switching converter or a buck converter?","createdAt":"2013-08-09T12:45:59","id":"994380560","thread":"1588426074","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":4,"isEdited":false,"message":"\u003cp>I think you hit the nail on the head when you commented that the voltage regulator was a major culprit.  I think that a 7805 isn't too much better than routing a zener across the power supply.  How about using a switching converter or a buck converter?\u003c/p>","isSpam":false,"isHighlighted":false,"points":4},{"forum":"comoyolabsblog","parent":null,"isApproved":true,"author":{"username":"filipporosso","about":"","name":"FIlippo Rosso","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.232124,"profileUrl":"https://disqus.com/by/filipporosso/","url":"","reputation":1.232124,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-11-05T18:38:26","id":"129967072","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/filipporosso.jpg","cache":"//a.disquscdn.com/1446595513/images/noavatar32.png"},"isCustom":false,"permalink":"http://disqus.com/api/users/avatars/filipporosso.jpg","cache":"//a.disquscdn.com/1446595513/images/noavatar92.png","large":{"permalink":"http://disqus.com/api/users/avatars/filipporosso.jpg","cache":"//a.disquscdn.com/1446595513/images/noavatar92.png"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Hey Christian, thank you for sharing. I only have one question. Are you sure that the modem will consume less energy like this? Everytime you turn off the modem it will attempt to connect to the mobile Net, which I suppose it's a heavy operation. \n\nI have noticed that everytime the modem turns on, I have some buzz on a stereo near-by (meaning that the radio transmitter is doing an hi-power operation). I don't have all those connection attempts when the modem is always on.","createdAt":"2014-11-05T18:42:07","id":"1678220719","thread":"1588426074","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":true,"message":"\u003cp>Hey Christian, thank you for sharing. I only have one question. Are you sure that the modem will consume less energy like this? Everytime you turn off the modem it will attempt to connect to the mobile Net, which I suppose it's a heavy operation.\u003c/p>\u003cp>I have noticed that everytime the modem turns on, I have some buzz on a stereo near-by (meaning that the radio transmitter is doing an hi-power operation). I don't have all those connection attempts when the modem is always on.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0}],"thread":{"feed":"https://comoyolabsblog.disqus.com/how_to_efficiently_operate_the_arduino_gsm_shield_with_a_battery_pack/latest.rss","uploadAdd":"//comoyolabsblog.disqus.com/thread/how_to_efficiently_operate_the_arduino_gsm_shield_with_a_battery_pack/async_media_upload/","identifiers":[],"dislikes":0,"likes":1,"message":"","isSpam":false,"isDeleted":false,"category":"1504216","clean_title":"How to efficiently operate the Arduino GSM shield with a battery pack","userScore":0,"userSubscription":false,"id":"1588426074","signedLink":"http://disq.us/?url=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&key=ijycXEZJJJ7gcbhFx3vzdg","createdAt":"2013-08-09T11:19:44","hasStreaming":false,"uploadRemove":"//comoyolabsblog.disqus.com/thread/how_to_efficiently_operate_the_arduino_gsm_shield_with_a_battery_pack/async_media_remove/","raw_message":"","isClosed":false,"link":"http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/","slug":"how_to_efficiently_operate_the_arduino_gsm_shield_with_a_battery_pack","forum":"comoyolabsblog","author":"27303869","posts":6,"moderators":[27303869,27357087],"title":"\n\t\tHow to efficiently operate the Arduino GSM shield with a battery pack\n\t\t\n\t","highlightedPost":null}},"order":"popular"}</script>
+
+    
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+        <!--[if lte IE 8]>
+<script src="//a.disquscdn.com/1446595513/build/vendor/ie8.js"></script>
+<![endif]-->
+<!--[if IE 9]>
+<script src="//a.disquscdn.com/1446595513/build/vendor/ie9.js"></script>
+<![endif]-->
+
+        
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"//a.disquscdn.com/next/current/embed"
+}</script>
+
+        <script src="lounge.load.535b1faff5d641b82126e27ee837ea19.js" id="bootstrap-script" data-app="lounge" async=""></script>
+    
+
+
+<div id="layout" data-tracking-area="layout">
+
+<div id="placement-top" data-tracking-area="discovery-north"></div>
+
+<div id="onboard" data-tracking-area="onboard"></div>
+
+<div id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post" style="display: none;"></div>
+
+<div id="global-alert"></div>
+
+<header id="main-nav" data-tracking-area="main-nav">
+<nav class="nav nav-primary">
+<ul>
+<li class="tab-conversation active" data-role="post-count"><a class="publisher-nav-color">
+<span class="comment-count">
+6 comments
+</span>
+
+<span class="comment-count-placeholder">
+Comments
+</span>
+</a>
+</li>
+<li class="tab-community">
+<a href="https://disqus.com/home/forums/comoyolabsblog/" class="publisher-nav-color" data-action="community-sidebar" data-forum="comoyolabsblog" id="community-tab">
+<span class="community-name">
+<strong>Comoyo Labs Blog</strong>
+
+</span>
+
+<strong class="community-name-placeholder">Community</strong>
+</a>
+</li>
+<li class="dropdown user-menu" data-role="logout"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="dropdown-toggle-wrapper">
+
+<span>
+Login
+</span>
+
+</span> <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+
+
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="auth:disqus">Disqus</a>
+</li>
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="auth:facebook">Facebook</a>
+</li>
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="auth:twitter">Twitter</a>
+</li>
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="auth:google">Google</a>
+</li>
+
+
+
+</ul>
+</li>
+<li class="notification-menu unread" data-role="notification-menu"><a href="https://disqus.com/home/inbox/" class="notification-container" data-action="home" data-home-path="home/inbox/">
+<span class="notification-icon icon-comment" aria-hidden=""></span>
+<span class="notification-count" data-role="notification-count">1</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<section id="conversation" data-role="main" data-tracking-area="main">
+<div class="nav nav-secondary" data-tracking-area="secondary-nav">
+<ul>
+<li id="recommend-button" class="recommend dropdown">
+<div class="thread-likes"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="recommend" title="Recommend this discussion" class="dropdown-toggle ">
+<span class="icon-heart"></span>
+<span class="label label-default">Recommend</span>
+<span class="label label-recommended">Recommended</span>
+<span class="label label-count">1</span>
+</a>
+<ul class="dropdown-menu coachmark">
+<li>
+<h2>Discussion Recommended!</h2>
+<p>Recommending means this is a discussion worth sharing. It gets shared to your followers' Disqus feeds, and gives the creator kudos!</p>
+<a href="http://disqus.com/home/?utm_source=disqus_embed&utm_content=recommend_btn" class="btn btn-primary" target="_blank">
+ Find More Discussions 
+</a>
+</li>
+</ul>
+</div></li>
+<li id="thread-share-menu" class="dropdown share-menu hidden-sm"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+<span class="icon-export"></span>
+<span class="label">Share</span>
+</a>
+<ul class="share-menu dropdown-menu">
+<li class="share">Share this discussion on
+<ul>
+<li class="twitter">
+<a data-action="share:twitter" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#">Twitter</a>
+</li>
+<li class="facebook">
+<a data-action="share:facebook" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#">Facebook</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-role="post-sort" class="dropdown sorting pull-right">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="dropdown-toggle" data-toggle="dropdown">
+Sort by Best
+
+
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu pull-right">
+<li class="selected">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="sort" data-sort="popular">Best<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="sort" data-sort="desc">Newest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="sort" data-sort="asc">Oldest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="posts">
+<div id="form"><form class="reply">
+<div class="postbox">
+<div role="alert"></div>
+<div class="avatar">
+<span class="user">
+<img data-role="user-avatar" src="noavatar92.4549c5353ccf103d32a8b81a856576ed.png" alt="Avatar">
+</span>
+</div>
+
+<div class="textarea-wrapper" data-role="textarea" dir="auto"><div><span class="placeholder">Join the discussion…</span><div class="textarea" tabindex="0" role="textbox" aria-multiline="true" contenteditable="true" data-role="editable" aria-label="Join the discussion…" style="overflow: auto; max-height: 350px;"><p><br></p></div><div style="display: none;"><ul class="suggestions">
+<li class="header">
+<h5>in this conversation</h5>
+</li>
+</ul>
+</div></div>
+<div data-role="drag-drop-placeholder" class="media-drag-hover" style="display: none">
+<div class="drag-text">
+⬇ Drag and drop your images here to upload them.
+</div>
+</div>
+<div class="media-preview empty" data-role="media-preview"><ul data-role="media-legacy-list"></ul>
+<ul data-role="media-progress-list"></ul>
+<ul data-role="media-rich-list"></ul>
+<div class="media-expanded empty" data-role="media-preview-expanded">
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-role="media-preview-expanded-image" alt="Media preview placeholder">
+</div>
+</div>
+<div class="edit-alert" role="postbox-alert"></div>
+<div class="post-actions">
+<ul class="wysiwyg">
+<li data-role="media-uploader"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" tabindex="-1" data-action="attach" class="attach" title="Upload Images"><span>Attach</span></a>
+<input type="file" data-role="media-upload" tabindex="-1" accept="image/*">
+</li>
+</ul>
+</div>
+</div>
+
+<div data-role="login-form"><div><section class="auth-section logged-out">
+<div class="connect">
+<h6>Log in with</h6>
+<ul data-role="login-menu" class="services login-buttons">
+
+
+<li class="auth-disqus">
+<button type="button" data-action="auth:disqus" title="Disqus"><i class="icon-disqus"></i></button>
+</li>
+<li class="auth-facebook">
+<button type="button" data-action="auth:facebook" title="Facebook"><i class="icon-facebook-circle"></i></button>
+</li>
+<li class="auth-twitter">
+<button type="button" data-action="auth:twitter" title="Twitter"><i class="icon-twitter-circle"></i></button>
+</li>
+<li class="auth-google">
+<button type="button" data-action="auth:google" title="Google"><i class="icon-google-plus-circle"></i></button>
+</li>
+</ul>
+</div>
+<div class="guest">
+<h6 class="guest-form-title">
+<span class="register-text"> or sign up with Disqus </span>
+<span class="guest-text"> or pick a name </span>
+</h6>
+
+<div class="what-is-disqus help-icon">
+<div id="rules" class="tooltip show">
+<h3>Disqus is a discussion network</h3>
+<ul>
+<li><span>Disqus never moderates or censors. The rules on this community are its own.</span></li>
+<li><span>Your email is safe with us. It's only used for moderation and optional notifications.</span></li>
+<li><span>Don't be a jerk or do anything illegal. Everything is easier that way.</span></li>
+</ul>
+<p class="clearfix"><a href="https://docs.disqus.com/kb/terms-and-policies/" class="btn btn-small" target="_blank">Read full terms and conditions</a></p>
+</div>
+</div>
+
+<p class="input-wrapper">
+<input dir="auto" type="text" placeholder="Name" name="display_name" id="view46_display_name" maxlength="30">
+</p>
+
+<div class="guest-details " data-role="guest-details">
+<p class="input-wrapper">
+<input dir="auto" type="email" placeholder="Email" name="email" id="view46_email">
+</p>
+
+<p class="input-wrapper">
+<input dir="auto" type="password" class="register-text" placeholder="Password" name="password" id="view46_password">
+</p>
+
+<div class="acceptance-wrapper register-text">
+By signing up, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+<div class="acceptance-wrapper guest-text">
+By posting, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+
+<div class="guest-checkbox">
+<label>
+<input type="checkbox" name="author-guest">
+I'd rather post as a guest
+</label>
+</div>
+
+<div class="proceed" data-role="submit-btn-container">
+<button type="submit" class="btn submit" aria-label="Post"><span class="icon-proceed"></span><div class="spinner"></div></button>
+<button type="submit" class="btn next" aria-label="Next"><span class="icon-proceed"></span><div class="spinner"></div></button>
+</div>
+</div>
+</div>
+</section>
+
+</div></div>
+</div>
+</form></div>
+
+<button class="alert realtime" style="display: none" data-role="realtime-notification">
+</button>
+
+<div id="no-posts" style="display:none"></div>
+
+<ul id="post-list" class="post-list"><li class="post" id="post-994311762"><div role="alert"></div>
+<div data-role="post-content" class="post-content seen">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/oskarrisberg/" class="user" data-action="profile" data-username="oskarrisberg">
+<img data-role="user-avatar" data-user="52030666" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/oskarrisberg/" data-action="profile" data-username="oskarrisberg" data-role="username">Oskar Risberg</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-994311762" data-role="relative-time" class="time-ago" title="Friday, August 9, 2013 4:09 PM">
+2 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>So how much of a change did this actually make?</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="vote-up  count-13" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">13</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-994311762">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:994311762">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-994984707"><div role="alert"></div>
+<div data-role="post-content" class="post-content seen">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/christiandtuen/" class="user" data-action="profile" data-username="christiandtuen">
+<img data-role="user-avatar" data-user="66623423" src="avatar92(1).jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/christiandtuen/" data-action="profile" data-username="christiandtuen" data-role="username">Christian D. Tuen</a></span>
+
+<span><a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-994311762" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Oskar Risberg</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-994984707" data-role="relative-time" class="time-ago" title="Saturday, August 10, 2013 1:23 AM">
+2 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>I haven't had the time to test the actual real life battery life for all this combined yet, but just turning off the modem and making the Arduino sleep gave us at least 50% more lifetime. That is including constant 5V on the RX pin and LEDs lit. With all these techniques combined, the sensor uses ~43mA with the 8 AA batteries/12V source (Alcaline AA has a capacity of about 2890mAH). Even though the overall battery life is not great, the percentage gained by some simple changes to the code is actually quite a lot.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-994984707">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:994984707">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-1440293024"><div role="alert"></div>
+<div data-role="post-content" class="post-content seen">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar">
+<div class="user"><img src="noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author">Charlie</span>
+
+<span><a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-994984707" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Christian D. Tuen</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-1440293024" data-role="relative-time" class="time-ago" title="Wednesday, June 18, 2014 4:06 AM">
+a year ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Hi Christian,</p><p>Have you worked out how much power you ended up drawing? I'm looking to power an Arduino with a GSM shield with a LiPo battery and solar panel. I read that the GSM shield requires peaks of up to 2A current.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-1440293024">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1440293024">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-1443465103"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/christiandtuen/" class="user" data-action="profile" data-username="christiandtuen">
+<img data-role="user-avatar" data-user="66623423" src="avatar92(1).jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/christiandtuen/" data-action="profile" data-username="christiandtuen" data-role="username">Christian D. Tuen</a></span>
+
+<span><a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-1440293024" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Charlie</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-1443465103" data-role="relative-time" class="time-ago" title="Thursday, June 19, 2014 12:17 PM">
+a year ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>The 2A current peak is normally only in bursts, and there is a capacitor (orange) on the shield that should handle the current peaks. So you will most likely not experience 2A drawn for long durations of time, but it is still possible that you will. The highest peak we experienced when measuring the total current drawn by the arduino+shield was 380mA, but this will likely vary under different conditions. The power drawn varies with what frequencies are used, and we did some testing on DCS (1800MHz) and E-GSM (900MHz). We found that for DCS the average peak value was about 1W (200mA at 5V), while for E-GSM it was 1.35W (270mA at 5V). Again, your results may wary. The peak values are mostly experienced during connection to the network, and are normally much lower. Amount of sun, time connected to the network, signal strength, frequency, amount of data transmitted, speed of the connection etc. will all impact how long you are able to run your project. <br>Feel free to reply with a link to your project if you want to share your experiences.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-1443465103">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1443465103">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-994380560"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/christophergosnell/" class="user" data-action="profile" data-username="christophergosnell">
+<img data-role="user-avatar" data-user="59562498" src="avatar92(2).jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/christophergosnell/" data-action="profile" data-username="christophergosnell" data-role="username">Christopher Gosnell</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-994380560" data-role="relative-time" class="time-ago" title="Friday, August 9, 2013 4:45 PM">
+2 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>I think you hit the nail on the head when you commented that the voltage regulator was a major culprit.  I think that a 7805 isn't too much better than routing a zener across the power supply.  How about using a switching converter or a buck converter?</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="vote-up  count-4" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">4</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-994380560">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:994380560">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-1678220719"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/filipporosso/" class="user" data-action="profile" data-username="filipporosso">
+<img data-role="user-avatar" data-user="129967072" src="noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/filipporosso/" data-action="profile" data-username="filipporosso" data-role="username">FIlippo Rosso</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-1678220719" data-role="relative-time" class="time-ago" title="Wednesday, November 5, 2014 10:42 PM">
+a year ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Hey Christian, thank you for sharing. I only have one question. Are you sure that the modem will consume less energy like this? Everytime you turn off the modem it will attempt to connect to the mobile Net, which I suppose it's a heavy operation.</p><p>I have noticed that everytime the modem turns on, I have some buzz on a stereo near-by (meaning that the radio transmitter is doing an hi-power operation). I don't have all those connection attempts when the modem is always on.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#comment-1678220719">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1678220719">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+<div class="load-more" data-role="more" style="display:none">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" data-action="more-posts" class="btn">Load more comments</a>
+</div>
+</div>
+
+</section>
+
+<div id="placement-bottom" data-tracking-area="discovery-south"></div>
+
+<div id="footer" data-tracking-area="footer">
+<ul>
+<li class="logo"><a href="https://disqus.com/" rel="nofollow" title="Powered by Disqus">Powered by Disqus</a></li>
+<li id="thread-subscribe-button" class="email"> 
+<div class="default">
+<a href="http://disqus.com/embed/comments/?base=default&version=535b1faff5d641b82126e27ee837ea19&f=comoyolabsblog&t_u=http%3A%2F%2Fcomoyo.github.io%2Fblog%2F2013%2F08%2F09%2FHow_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack%2F&t_d=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&t_t=%0A%09%09How%20to%20efficiently%20operate%20the%20Arduino%20GSM%20shield%20with%20a%20battery%20pack%0A%09%09%0A%09&s_o=default#" rel="nofollow" data-action="subscribe" title="Subscribe and get email updates from this discussion"><i aria-hidden="true" class="icon-mail"></i><span class="clip">Subscribe</span> <i aria-hidden="true" class="icon-checkmark"></i></a>
+</div>
+<div class="form">
+<div class="input-wrapper"><input id="thread-subscribe-email" type="email" placeholder="yourname@email.com"></div>
+</div>
+</li>
+<li class="install">
+<a href="https://publishers.disqus.com/engage?utm_source=comoyolabsblog&utm_medium=Disqus-Footer" rel="nofollow" target="_blank">
+<i aria-hidden="true" class="icon-disqus"></i>
+<span class="clip">Add Disqus to your site</span>
+</a>
+</li>
+<li class="privacy">
+<a href="https://help.disqus.com/customer/portal/articles/1657951?utm_source=disqus&utm_medium=embed-footer&utm_content=privacy-btn" rel="nofollow" target="_blank">
+<i aria-hidden="true" class="icon-lock"></i>
+<span class="clip">Privacy</span>
+</a>
+</li>
+</ul>
+</div>
+</div></body></html>

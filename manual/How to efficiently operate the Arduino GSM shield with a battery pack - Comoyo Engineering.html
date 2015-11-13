@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)http://comoyo.github.io/blog/2013/08/09/How_to_efficiently_operate_the_Arduino_GSM_shield_with_a_battery_pack/#disqus_thread -->
+<html class="js no-flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths wf-proximanova-n4-inactive wf-proximanova-i4-inactive wf-proximanova-n7-inactive wf-proximanova-i7-inactive wf-inactive" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+          <title> How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering</title>
+          <meta name="description" content="Comoyo Engineering">
+          <meta name="author" content="">
+
+          <meta name="viewport" content="width=device-width">
+
+          <link rel="stylesheet" href="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/fonts.css">
+          <link rel="stylesheet" href="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/pygment.css">
+
+          <!-- Development -->
+          <!--
+          <link rel="stylesheet/less" href="/assets/less/style.less">
+          <script type="text/javascript" src="/assets/js/libs/less-1.3.0.min.js"></script>
+          -->
+
+          <!-- Production -->
+          <link rel="stylesheet" href="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/style.min.css">
+
+          <link rel="alternate" type="application/rss+xml" title="Comoyo Engineering" href="http://comoyo.github.com/feed.xml">
+
+          <div class="fit-vids-style">­<style>               .fluid-width-video-wrapper {                 width: 100%;                              position: relative;                       padding: 0;                            }                                                                                   .fluid-width-video-wrapper iframe,        .fluid-width-video-wrapper object,        .fluid-width-video-wrapper embed {           position: absolute;                       top: 0;                                   left: 0;                                  width: 100%;                              height: 100%;                          }                                       </style></div><script type="text/javascript" async="" src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/ga.js"></script><script type="text/javascript" src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/fhp6sal.js"></script>
+          <style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link rel="stylesheet" href="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/fhp6sal-d.css"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+          <script src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+        <script type="text/javascript" async="" src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/embed.js"></script><script async="" type="text/javascript" src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/count.js"></script><link rel="stylesheet" href="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/loading.8023a7350e47171f7bb79707886cd7c5.css"><script src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/count-data.js"></script><script src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/alfie.f51946af45e0b561c60f768335c9eb79.js" async="" charset="UTF-8"></script></head>
+        <body class="">
+          <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+          <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+              <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="http://www.comoyo.com/"><img src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/logo_hvit.png"></a>
+                <div class="nav-collapse">
+                  <ul class="nav">
+                    <li><a href="http://comoyo.github.io/">Blog</a></li>
+                    <li><a href="https://telenordigital.recruiterbox.com/">Careers</a></li>
+                  </ul>
+                  <ul class="nav pull-right">
+                    <li><a href="https://www.facebook.com/telenordigital">Facebook</a></li>
+                    <li><a href="https://twitter.com/TelenorDigital">Twitter</a></li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+              </div>
+            </div>
+          </div>
+          <div class="container">
+	<div id="subnav" class="visible-desktop subnav subnav-fixed-top">
+		<div class="subnav-inner">
+			<div class="container">
+				<a href="http://comoyo.github.io/" class="brand">Blog</a>
+			</div>
+		</div>
+	</div>
+	
+<div class="row">
+	<div class="span8">
+		<article>
+			<header class="page-header">
+	<h1>
+		<a href="">How to efficiently operate the Arduino GSM shield with a battery pack</a>
+		
+	</h1>
+</header>
+<p class="byline muted">
+	<span><i class="icon-time"></i> 2013-08-09</span>
+	<span><i class="icon-bookmark"></i> m2m</span>
+	<span><i class="icon-comments"></i> <a href="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering.html">6 Comments</a></span>
+
+</p>
+
+			<p><strong>This is a follow-up post on how to build a water temperature sensor using the Arduino GSM shield and Xively. This post should make sense on its own, but if you want to read the first part you can find it <a href="http://comoyo.github.io/blog/2013/08/01/m2m_adventures/">here</a>.</strong></p>
+
+<p>The biggest problem with the sensor we made in the first post is that it cannot operate on battery power for any considerable amount of time. In our testing using 8 AA-batteries the sensor lasted for about 24hrs, which is not acceptable for most sensors. So, how can we make it run for longer periods of time?</p>
+
+<p><img src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/battery.jpg" alt="image"></p>
+
+<h2 id="power-down-the-modem-and-leds">Power down the modem and LEDs</h2>
+<p>The first thing to do is to disconnect the GPRS connection and turn off the modem when it is not in use. The modem is the biggest energy consumer, reaching 2W in some configurations. So we need a way to switch it off and on again.</p>
+
+<p>We start by making a function to turn on the modem, and set up the connection. This should seem familiar if you have read the previous post, as the code is more or less identical to its setup function. Whereas in the previous version of the program you might get away with not having a delay between connecting to GSM and setting up the GPRS connection, it becomes quite important here since we are disconnecting and connecting more than once. In our testing we usually had problems connecting to the network during rush-hour when using too small of a delay, so even if your code works right now, it might not tomorrow morning. We still had problems using 1s delay so we bumped it up to 3s and have not had any problems since. You might get away with a lower delay, but it should at least be 1s.</p>
+
+<pre><code>void startConnection(){
+  while (notConnected) {
+    digitalWrite(3,HIGH);
+    if(gsmAccess.begin(PINNUMBER)==GSM_READY){
+      delay(3000);
+      if(gprs.attachGPRS(GPRS_APN, GPRS_LOGIN, GPRS_PASSWORD)==GPRS_READY){
+        notConnected = false;
+        digitalWrite(redLed, LOW);
+        digitalWrite(greenLed, HIGH);
+      }
+    }
+    else{
+      digitalWrite(redLed, HIGH);
+      delay(1000);
+    }
+  }
+}
+</code></pre>
+
+<p>Then lets look at how to disconnect. The heart of this function is the call to the GSM shutdown() function. We use the notConnected boolean to check that we are connected, then try to shut down the modem. If it managed to shut down, we turn off all LEDs to save power while not connected.</p>
+
+<pre><code>void closeConnection(){
+  while(notConnected==false){
+    if(gsmAccess.shutdown()){
+      delay(1000);
+      digitalWrite(3,LOW);
+      notConnected = true;
+      digitalWrite(redLed, LOW);
+      digitalWrite(greenLed, LOW);
+    }
+    else{
+      delay(1000);
+    }
+  }
+}
+</code></pre>
+
+<p>We now have a way of turning the modem off and on in between measurements. So in the loop function we start by calling startConnection(), measure temperature, upload the data, and end with calling closeConnection().</p>
+
+<h2 id="set-serial-pins-to-low">Set serial pins to low</h2>
+<p>Setting the serial RX pin on the GSM shield low after shutdown saved us a lot of energy. This seems to be a problem that <a href="http://forum.arduino.cc/index.php?topic=158811.0">is well known</a>, and will be added in a future version of the library. In the meantime we need to do this ourselves.</p>
+
+<h2 id="change-gsm-operating-frequency">Change GSM operating frequency</h2>
+<p>The Arduino GSM shield uses the Quectel M10 modem. This is a quad-band modem, meaning it can run on all four most common GSM frequencies. The modems <a href="http://www.quectel.com/UploadFile/Product/Quectel_M10_GSM_Specification_V3.0.pdf">specifications</a> tells us that the modem uses 1W of power on 850/900 MHz, and 2W on 1800/1900 MHz. Our measurements showed the same results, even if the connection was considerably weaker on 1800 MHz than on 900 MHz. So changing the operating frequency of the modem will likely save us some energy. A simple way to change the modems operating frequency, is using the <a href="http://arduino.cc/en/Tutorial/GSMToolsBandManagement">Arduino Band Management</a> program. When you change the frequency it is changed internally in the modem so you don’t have to specify it every time you upload new code</p>
+
+<p>When you run this program you can either choose single frequencies (top three choices) or a combination of several frequencies. If you choose one of the combinations, the Arduino is going to connect to the frequency with the strongest signal. This won’t always be the best in terms of power, so in our case we use the DCS frequency specifically. In Norway (at least) this frequency is not used as much outside of the cities, so we will lose some portability. Make sure the frequency you choose is available in the area you are going to use your Arduino.</p>
+
+<h2 id="let-the-arduino-sleep">Let the Arduino sleep</h2>
+<p>There are several pages on the internet explaining how to make your Arduino sleep, but the by far easiest way to do this is to use Rocket Scream’s <a href="https://github.com/rocketscream/Low-Power">LowPower library</a>. From the code below, you can see that we use the LowPower powerDown function. This puts the Arduino to sleep and sets the watchdog timer to wake it up. The ATmega328 supports sleep up to 8 seconds, so we set the timer to that in the parameters of the function. We also turn off the Analog to Digital Converter and the Brownout Detector to save even more energy.</p>
+
+<p>The biggest problem with making the Arduino sleep, is that it stops counting running milliseconds while it sleeps. Therefore the previous way of posting values every five minutes won’t work anymore. Instead we start counting sleep-cycles. Counting 25 sleep cycles plus the time it takes to get and upload data, we get data spaced somewhere between 4 and 5 minutes apart. You can choose how many sleep cycles you want to wait between each measurement, and the battery is likely to improve with a longer interval (more cycles). If you want to read more about sleep and the watchdog timer, you can take a look at the <a href="http://www.atmel.com/Images/doc8161.pdf">ATmega328 documentation</a> and <a href="http://www.rocketscream.com/blog/2011/07/04/lightweight-low-power-arduino-library/">Rocket Scream’s description</a> of their library.</p>
+
+<pre><code>void loop(void) {
+  if(wait&gt;=25){
+    startConnection();
+    temperature = temp.getTemp(water);
+    datastreams[0].setFloat(temperature);
+    temperature = temp.getTemp(air);
+    datastreams[1].setFloat(temperature);
+    int ret = xivelyclient.put(feed, xivelyKey);
+    if(ret == 200){
+      digitalWrite(greenLed, LOW);
+      delay(100);
+      digitalWrite(greenLed, HIGH);
+    }
+    else{
+      digitalWrite(redLed, HIGH);
+      delay(100);
+      digitalWrite(redLed, LOW);
+    }
+    closeConnection();
+    wait=0;
+  }	  	  
+  LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);	  
+  wait++;
+}
+</code></pre>
+
+<h2 id="other-things-to-consider">Other things to consider</h2>
+<p>The Arduino was made to be versatile, not to be used for low power projects. Using the voltage regulator and other standard features of the Arduino, we lose a lot more energy than what we would have if we made a specific board for this specific use case. This guide was made to be simple for others to follow so we decided to only do changes to the program, not the hardware. If you want to lower the power consumption further than we have done here, you should take a look at <a href="http://gammon.com.au/power">gammon.com.au/power</a> which has a lot of good tips.</p>
+
+<p>Complete, commented code is available at <a href="https://github.com/comoyo/BeachSensor">https://github.com/comoyo/BeachSensor</a></p>
+
+			<div id="disqus_thread"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/saved_resource.html" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 1321px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'comoyolabsblog'; // required: replace example with your forum 
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
+            
+		</article>
+	</div>
+	<div class="span4" id="sidebar">
+		<div class="well">
+			
+			
+				
+					
+					<div class="author">
+	<div class="pull-right img">
+		<img src="http://en.gravatar.com/avatar/5338057a67893247920e0d33d9094adf">
+	</div>
+	<h2>Christian Dancke Tuen</h2>
+	
+	<p>
+		<b>Position:</b> Summer intern at Comoyo.<br>
+		
+		<b>Github:</b> <a href="http://www.github.com/christiandt">christiandt</a><br>
+		
+		
+		
+			<b>Web:</b> <a href="http://christiandt.com/">http://christiandt.com</a>
+		
+	</p>
+	
+		<p>Summer Intern at Comoyo. Video technician at <a href="http://samfundet.no/">Samfundet</a>, spare time maker.</p>
+
+	
+</div>
+
+				
+			
+		</div>
+	</div>
+</div>
+
+</div>
+
+           <!-- /container -->
+          <script src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/jquery.min.js"></script>
+          <script>window.jQuery || document.write('<script src="/assets/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+            
+            <!-- scripts concatenated and minified via ant build script-->
+            <script src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/bootstrap.js"></script>            
+            <script src="./How to efficiently operate the Arduino GSM shield with a battery pack - Comoyo Engineering_files/plugins.js"></script>
+            <!-- <script src="/assets/js/script.js"></script> -->
+            <!-- end scripts-->
+            
+            <script type="text/javascript">
+
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-32595498-1']);
+              _gaq.push(['_trackPageview']);
+
+              (function() {
+               var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+               ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+               })();
+
+            </script>
+            
+            <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              var disqus_shortname = 'comoyolabsblog'; // required: replace example with your forum shortname
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+              }());
+            </script>
+            
+          
+        
+</body></html>

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<!-- saved from url=(0138)http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield -->
+<html lang="ru" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Взаимодействие с GSM/GPRS Shield для работы с SMS и голосовыми вызовами [Амперка / Вики]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="беспроводная-связь,gprs-shield">
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.amperka.ru/lib/exe/opensearch.php" title="Амперка / Вики">
+<link rel="start" href="http://wiki.amperka.ru/">
+<link rel="contents" href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?do=index" title="Все страницы">
+<link rel="alternate" type="application/rss+xml" title="Недавние изменения" href="http://wiki.amperka.ru/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Текущее пространство имён" href="http://wiki.amperka.ru/feed.php?mode=list&ns=%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C">
+<link rel="alternate" type="text/html" title="Простой HTML" href="http://wiki.amperka.ru/_export/xhtml/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield">
+<link rel="alternate" type="text/plain" title="вики-разметка" href="http://wiki.amperka.ru/_export/raw/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield">
+<link rel="canonical" href="./Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики]_files/Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики].html">
+<link rel="stylesheet" type="text/css" href="./Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='беспроводная-связь';var JSINFO = {"id":"\u0431\u0435\u0441\u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0430\u044f-\u0441\u0432\u044f\u0437\u044c:gprs-shield","namespace":"\u0431\u0435\u0441\u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0430\u044f-\u0441\u0432\u044f\u0437\u044c"};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="./Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики]_files/js.php"></script><style id="iris-css">.iris-picker{display:block;position:relative}.iris-picker,.iris-picker *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input+.iris-picker{margin-top:4px}.iris-error{background-color:#ffafaf}.iris-border{border-radius:3px;border:1px solid #aaa;width:200px;background-color:#fff}.iris-picker-inner{position:absolute;top:0;right:0;left:0;bottom:0}.iris-border .iris-picker-inner{top:10px;right:10px;left:10px;bottom:10px}.iris-picker .iris-square-inner{position:absolute;left:0;right:0;top:0;bottom:0}.iris-picker .iris-square,.iris-picker .iris-slider,.iris-picker .iris-square-inner,.iris-picker .iris-palette{border-radius:3px;box-shadow:inset 0 0 5px rgba(0,0,0,.4);height:100%;width:12.5%;float:left;margin-right:5%}.iris-picker .iris-square{width:76%;margin-right:10%;position:relative}.iris-picker .iris-square-inner{width:auto;margin:0}.iris-ie-9 .iris-square,.iris-ie-9 .iris-slider,.iris-ie-9 .iris-square-inner,.iris-ie-9 .iris-palette{box-shadow:none;border-radius:0}.iris-ie-9 .iris-square,.iris-ie-9 .iris-slider,.iris-ie-9 .iris-palette{outline:1px solid rgba(0,0,0,.1)}.iris-ie-lt9 .iris-square,.iris-ie-lt9 .iris-slider,.iris-ie-lt9 .iris-square-inner,.iris-ie-lt9 .iris-palette{outline:1px solid #aaa}.iris-ie-lt9 .iris-square .ui-slider-handle{outline:1px solid #aaa;background-color:#fff;-ms-filter:"alpha(Opacity=30)"}.iris-ie-lt9 .iris-square .iris-square-handle{background:0;border:3px solid #fff;-ms-filter:"alpha(Opacity=50)"}.iris-picker .iris-strip{margin-right:0;position:relative}.iris-picker .iris-strip .ui-slider-handle{position:absolute;background:0;margin:0;right:-3px;left:-3px;border:4px solid #aaa;border-width:4px 3px;width:auto;height:6px;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.2);opacity:.9;z-index:5;cursor:ns-resize}.iris-strip .ui-slider-handle:before{content:" ";position:absolute;left:-2px;right:-2px;top:-3px;bottom:-3px;border:2px solid #fff;border-radius:3px}.iris-picker .iris-slider-offset{position:absolute;top:11px;left:0;right:0;bottom:-3px;width:auto;height:auto;background:transparent;border:0;border-radius:0}.iris-picker .iris-square-handle{background:transparent;border:5px solid #aaa;border-radius:50%;border-color:rgba(128,128,128,.5);box-shadow:none;width:12px;height:12px;position:absolute;left:-10px;top:-10px;cursor:move;opacity:1;z-index:10}.iris-picker .ui-state-focus .iris-square-handle{opacity:.8}.iris-picker .iris-square-handle:hover{border-color:#999}.iris-picker .iris-square-value:focus .iris-square-handle{box-shadow:0 0 2px rgba(0,0,0,.75);opacity:.8}.iris-picker .iris-square-handle:hover::after{border-color:#fff}.iris-picker .iris-square-handle::after{position:absolute;bottom:-4px;right:-4px;left:-4px;top:-4px;border:3px solid #f9f9f9;border-color:rgba(255,255,255,.8);border-radius:50%;content:" "}.iris-picker .iris-square-value{width:8px;height:8px;position:absolute}.iris-ie-lt9 .iris-square-value,.iris-mozilla .iris-square-value{width:1px;height:1px}.iris-palette-container{position:absolute;bottom:0;left:0;margin:0;padding:0}.iris-border .iris-palette-container{left:10px;bottom:10px}.iris-picker .iris-palette{margin:0;cursor:pointer}.iris-square-handle,.ui-slider-handle{border:0;outline:0}</style>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://wiki.amperka.ru/lib/tpl/amperka2/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://wiki.amperka.ru/lib/tpl/amperka2/images/apple-touch-icon.png">
+    <link href="./Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики]_files/css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_amperka2     ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="toolbar-wrapper">
+    <div id="toolbar">
+        <ul>
+            <li><form action="http://wiki.amperka.ru/start" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search"><input type="text" placeholder="Поиск" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><button type="submit" title="Поиск">Поиск</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form></li>
+        </ul>
+    </div>
+</div>
+
+<div id="dokuwiki__header"><div class="pad group">
+
+    <ul id="scope" class="head-menu">
+    <li><a href="http://wiki.amperka.ru/" class="current">Вики</a></li>
+    <li><a href="http://youtube.com/AmperkaRu">Видео</a></li>
+    <li><a href="http://forum.amperka.ru/">Форум</a></li>
+    <li><a href="http://blog.amperka.ru/">Блог</a></li>
+</ul>
+
+    <div class="headings group">
+        <!--ul class="a11y skip">
+            <li><a href="#dokuwiki__content">Перейти к содержанию</a></li>
+        </ul-->
+
+        <a href="http://amperka.ru/" accesskey="h" title="[H]"><img src="./Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики]_files/logo.png" width="148" height="72" alt=""></a>            </div>
+
+
+    <!-- BREADCRUMBS -->
+    
+
+
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                
+                <!--div class="pageId"><span>беспроводная-связь:gprs-shield</span></div-->
+
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Содержание</h3>
+<div aria-expanded="true">
+
+<ul class="toc" style="">
+<li class="level1"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#взаимодействие_с_gsm_gprs_shield_для_работы_с_sms_и_голосовыми_вызовами">Взаимодействие с GSM/GPRS Shield для работы с SMS и голосовыми вызовами</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#что_понадобится">Что понадобится</a></div></li>
+<li class="level2"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#приём_звонков">Приём звонков</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#необходимые_at-команды">Необходимые AT-команды</a></div></li>
+<li class="level3"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#код_примера">Код примера</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#осуществление_звонка_при_нажатии_кнопки">Осуществление звонка при нажатии кнопки</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#необходимые_at-команды1">Необходимые AT-команды</a></div></li>
+<li class="level3"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#код_примера1">Код примера</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#отправка_sms_при_нажатии_кнопки">Отправка SMS при нажатии кнопки</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#необходимые_at_команды">Необходимые AT команды</a></div></li>
+<li class="level3"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#код_примера2">Код примера</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#управление_светодиодами_с_помощью_sms">Управление светодиодами с помощью SMS</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#необходимые_at-команды2">Необходимые AT-команды</a></div></li>
+<li class="level3"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#код_примера3">Код примера</a></div></li>
+<li class="level3"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#результат">Результат</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#библиотека_sim900">Библиотека SIM900</a></div></li>
+<li class="level2"><div class="li"><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#включение_gprs_shield_v2">Включение GPRS Shield v2</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+                    <article class="text with-toc">
+                      
+<h1 class="sectionedit1" id="взаимодействие_с_gsm_gprs_shield_для_работы_с_sms_и_голосовыми_вызовами">Взаимодействие с GSM/GPRS Shield для работы с SMS и голосовыми вызовами</h1>
+<div class="level1">
+
+<p>
+GPRS Shield от Seeed Studio — это плата расширения, позволяющая Arduino работать в сетях сотовой связи по технологиям GSM/GPRS для приёма и передачи данных, SMS и голосовой связи.
+</p>
+
+<p>
+Плата построена на базе модуля SIMCom SIM900. Также на ней расположены: слот для SIM-карты, стандартные 3,5 мм джеки для аудио-входа и выхода и разъём для внешней антенны.
+</p>
+
+<p>
+Общение с платой производится через serial-соединение с помощью набора AT-команд. <code>AT commands</code> — язык инструкций, изначально разработанный для управления настройками модемов, однако оказался настолько удобным, что было выпущено несколько стандартов для мобильных устройств. AT — это просто текстовый протокол, в котором в качестве префикса отдельной команды используется строка <code>AT</code> (от англ. attention), а название и параметры следуют далее так же в текстовом виде. Набор допустимых команд и их параметры описываются стандартом, который поддерживает конкретное устройство. Сейчас наиболее используемые стандарты: GSM 07.07, 07.05.
+</p>
+
+<p>
+С помощью джамперов на плате возможно установить используемые для коммуникации контакты: аппаратные 0-й и 1-й или 7-й и 8-й для работы через SoftwareSerial-эмуляцию. По этому каналу в итоге и будут пересылаться AT-команды.
+</p>
+
+<p>
+Посмотреть описание и минимальные примеры можно на <a href="http://www.seeedstudio.com/wiki/index.php?title=GPRS_Shield_v0.9b" class="urlextern" title="http://www.seeedstudio.com/wiki/index.php?title=GPRS_Shield_v0.9b" rel="nofollow">странице производителя</a>. <a href="http://garden.seeedstudio.com/images/a/a8/SIM900_AT_Command_Manual_V1.03.pdf" class="urlextern" title="http://garden.seeedstudio.com/images/a/a8/SIM900_AT_Command_Manual_V1.03.pdf" rel="nofollow">Мануал для изучения AT команд</a> можно скачать у них же.
+</p>
+
+<p>
+В данной статье будут рассмотрены несколько примеров взаимодействия с платой: возможность звонить и принимать звонки с других телефонов, отправлять SMS на заданный номер при нажатии на кнопку, управлять светодиодами с помощью входящих SMS.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="что_понадобится">Что понадобится</h2>
+<div class="level2">
+
+<p>
+Для нескольких демонстраций нам понадобятся следующие составляющие:
+</p>
+
+<p>
+<img src="./Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики]_files/беспроводная-связь-img-gprs_arduino_all_.jpg" class="media" alt="">
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://amperka.ru/product/arduino-uno" class="interwiki iw_amp" title="http://amperka.ru/product/arduino-uno">Arduino Uno</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://amperka.ru/product/arduino-gprs-shield" class="interwiki iw_amp" title="http://amperka.ru/product/arduino-gprs-shield">GPRS Shield</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://amperka.ru/product/breadboard" class="interwiki iw_amp" title="http://amperka.ru/product/breadboard">Breadboard</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://amperka.ru/product/troyka-button" class="interwiki iw_amp" title="http://amperka.ru/product/troyka-button">Модуль-кнопка</a></div>
+</li>
+<li class="level1"><div class="li"> Несколько <a href="http://amperka.ru/product/wire-mm" class="interwiki iw_amp" title="http://amperka.ru/product/wire-mm">проводов «папа-папа»</a> и пара <a href="http://amperka.ru/product/resistor" class="interwiki iw_amp" title="http://amperka.ru/product/resistor">резисторов</a> на 10 кОм</div>
+</li>
+<li class="level1"><div class="li"> Пара <a href="http://amperka.ru/product/led-5mm" class="interwiki iw_amp" title="http://amperka.ru/product/led-5mm">светодиодов</a>: зелёного и жёлтого цветов</div>
+</li>
+<li class="level1"><div class="li"> Работающая SIM-карта любого оператора</div>
+</li>
+</ul>
+
+<p>
+В примерах используется SIM-карта, которая не требующая PIN-код при подключении. Возможно использовать и защищёную карту, но это потребует дополнительных действий при инициализации и не рассматривается в этой статье.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="приём_звонков">Приём звонков</h2>
+<div class="level2">
+
+<p>
+Установим SIM-карту на GPRS Shield, а GPRS Shield — на Arduino. С помощью джамперов соединим контакты для работы через SoftwareSerial-эмуляцию.
+</p>
+
+<p>
+<img src="./Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики]_files/беспроводная-связь-img-gprs_arduino_simple_.jpg" class="media" alt="">
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="необходимые_at-команды">Необходимые AT-команды</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <code>AT</code> — простейшая команда, при которой GPRS Shield ничего не делает, в случае правильного подключения возвращает в ответ <code>OK</code></div>
+</li>
+<li class="level1"><div class="li"> <code>ATA</code> — команда принять входящий вызов. Сам факт вызова устанавливается регулярно приходящими с платы во время звонка сообщениями <code>RING</code></div>
+</li>
+<li class="level1"><div class="li"> <code>AT+CHUP</code> — отклонить вызов</div>
+</li>
+<li class="level1"><div class="li"> <code>AT+CLCC</code> — позволяет узнать номер звонящего</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit5" id="код_примера">Код примера</h3>
+<div class="level3">
+
+<p>
+Для того, чтобы принимать звонки, воспользуемся следующим простым кодом. 
+</p>
+<dl class="code">
+<dt><a href="http://wiki.amperka.ru/_export/code/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?codeblock=0" title="Скачать код" class="mediafile mf_ino">Call_receiving.ino</a></dt>
+<dd><pre class="code c"><span class="co2">#include &lt;SoftwareSerial.h&gt;</span>
+&nbsp;
+<span class="co1">//заводим Serial-соединение с GPRS-Shield на 7 и 8 цифровых входах</span>
+SoftwareSerial gprsSerial<span class="br0">(</span><span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">8</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw4">void</span> setup<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="co1">// GPRS Shield общается по умолчанию на скорости 19200 бод</span>
+    gprsSerial.<span class="me1">begin</span><span class="br0">(</span><span class="nu0">19200</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="co1">//в строке curStr будем хранить текущую строку, которую передает нам плата</span>
+String currStr <span class="sy0">=</span> <span class="st0">""</span><span class="sy0">;</span> 
+<span class="kw4">int</span> updateTime <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw4">void</span> loop<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    touch<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">!</span>gprsSerial.<span class="me1">available</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span>
+        <span class="kw1">return</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co1">// Считываем очередной символ с платы</span>
+    <span class="kw4">char</span> currSymb <span class="sy0">=</span> gprsSerial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>    
+&nbsp;
+    <span class="kw1">if</span> <span class="br0">(</span><span class="st0">'<span class="es1">\r</span>'</span> <span class="sy0">==</span> currSymb<span class="br0">)</span> <span class="br0">{</span> 
+        <span class="co1">// Получен символ перевода строки, это значит, что текущее</span>
+        <span class="co1">// сообщение от платы завершено и мы можем на него отреагировать.</span>
+        <span class="co1">// Если текущая строка - это RING, то значит, нам кто-то звонит</span>
+        <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">!</span>currStr.<span class="me1">compareTo</span><span class="br0">(</span><span class="st0">"RING"</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+            <span class="co1">//кокетничаем 3 секунды, чтобы дать услышать звонящему гудок</span>
+            delay<span class="br0">(</span><span class="nu0">3000</span><span class="br0">)</span><span class="sy0">;</span>
+            <span class="co1">//посылаем команду на поднятие трубки</span>
+            gprsSerial.<span class="me1">println</span><span class="br0">(</span><span class="st0">"ATA"</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+        currStr <span class="sy0">=</span> <span class="st0">""</span><span class="sy0">;</span>
+    <span class="br0">}</span> <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span>currSymb <span class="sy0">!=</span> <span class="st0">'<span class="es1">\n</span>'</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="co1">// Дополняем текущую команду новым сиволом</span>
+        <span class="co1">// При этом игнорируем второй символ в последовательности переноса</span>
+        <span class="co1">// строки: \r\n</span>
+        currStr <span class="sy0">+=</span> String<span class="br0">(</span>currSymb<span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="coMULTI">/*
+ * Функция провоцирует поддержание коммуникации с платой даже если
+ * та была перезагружена без перезагрузки Arduino
+ */</span>
+<span class="kw4">void</span> touch<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw1">if</span> <span class="br0">(</span>millis<span class="br0">(</span><span class="br0">)</span> <span class="sy0">&gt;=</span> updateTime<span class="br0">)</span> <span class="br0">{</span>
+        gprsSerial.<span class="me1">println</span><span class="br0">(</span><span class="st0">"AT"</span><span class="br0">)</span><span class="sy0">;</span>
+        updateTime <span class="sy0">+=</span> <span class="nu0">5000</span><span class="sy0">;</span>
+    <span class="br0">}</span>  
+<span class="br0">}</span></pre>
+</dd></dl>
+
+<p>
+Если просто подключить наушники и микрофон в соответствующие разъёмы, после приёма звонка с абонентом можно будет общаться точно так же как и по обычному телефону.
+</p>
+
+</div>
+
+<h2 class="sectionedit6" id="осуществление_звонка_при_нажатии_кнопки">Осуществление звонка при нажатии кнопки</h2>
+<div class="level2">
+
+<p>
+Теперь давайте соберём схему, чтобы при нажатии кнопки шёл вызов наперёд заданного абонента. Понятно, что нетрудно сделать так, чтобы номер можно было вводить, например, в терминале, но оставляем это для вашего собственного творчества.
+</p>
+
+<p>
+Итак, устройство будет выглядить приблизительно так:
+</p>
+
+<p>
+<img src="./Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики]_files/беспроводная-связь-img-gprs_arduino_button_.jpg" class="media" alt="">
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="необходимые_at-команды1">Необходимые AT-команды</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <code>ATD + x</code> — набрать номер x. Если звонок не состоялся, например, нет сигнала базовой станции, то плата отвечает <code>NO DIALTONE</code>. </div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit8" id="код_примера1">Код примера</h3>
+<div class="level3">
+
+<p>
+Код будет следующим:
+</p>
+<dl class="code">
+<dt><a href="http://wiki.amperka.ru/_export/code/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?codeblock=1" title="Скачать код" class="mediafile mf_ino">Call_button.ino</a></dt>
+<dd><pre class="code c"><span class="co2">#include &lt;SoftwareSerial.h&gt;</span>
+&nbsp;
+SoftwareSerial gprsSerial<span class="br0">(</span><span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">8</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw4">int</span> btnPin <span class="sy0">=</span> <span class="nu0">12</span><span class="sy0">;</span>
+boolean prevBtn <span class="sy0">=</span> LOW<span class="sy0">;</span>
+&nbsp;
+<span class="kw4">void</span> setup<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    gprsSerial.<span class="me1">begin</span><span class="br0">(</span><span class="nu0">19200</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> loop<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    boolean currBtn <span class="sy0">=</span> digitalRead<span class="br0">(</span>btnPin<span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>prevBtn <span class="sy0">!=</span> currBtn <span class="sy0">&amp;&amp;</span> currBtn <span class="sy0">==</span> HIGH<span class="br0">)</span> <span class="br0">{</span>
+        <span class="co1">//сразу после нажатия кнопки начинаем звонить по заданному номеру</span>
+        gprsSerial.<span class="me1">println</span><span class="br0">(</span><span class="st0">"ATD + +79031034424;"</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+    prevBtn <span class="sy0">=</span> currBtn<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+</dd></dl>
+
+</div>
+
+<h2 class="sectionedit9" id="отправка_sms_при_нажатии_кнопки">Отправка SMS при нажатии кнопки</h2>
+<div class="level2">
+
+<p>
+Это может быть так называемая «тревожная кнопка», при нажатии на которую по заданному номеру отправляется смс с заданным содержанием.
+Схема для отправки SMS по заданному номеру при нажатии кнопки будет такой же, что и в предыдущем примере. Код также принципиально сильно отличаться не будет.
+</p>
+
+</div>
+
+<h3 class="sectionedit10" id="необходимые_at_команды">Необходимые AT команды</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <code>AT+CMGF=1</code> — устанавливает текстовый режим для SMS-сообщений</div>
+</li>
+<li class="level1"><div class="li"> <code>AT + CMGS = "x"</code> — устанавливает в качестве получателя смс номер <code>x</code></div>
+</li>
+<li class="level1"><div class="li"> <code>(char)26</code> или <code>ctrl+z</code> — завершает текст сообщения, после этого символа сообщение начинает отправляться</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit11" id="код_примера2">Код примера</h3>
+<div class="level3">
+<dl class="code">
+<dt><a href="http://wiki.amperka.ru/_export/code/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?codeblock=2" title="Скачать код" class="mediafile mf_ino">Alarm_button.ino</a></dt>
+<dd><pre class="code c"><span class="co2">#include &lt;SoftwareSerial.h&gt;</span>
+&nbsp;
+SoftwareSerial gprsSerial<span class="br0">(</span><span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">8</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw4">int</span> btnPin <span class="sy0">=</span> <span class="nu0">12</span><span class="sy0">;</span>
+boolean prevBtn <span class="sy0">=</span> LOW<span class="sy0">;</span>
+&nbsp;
+<span class="kw4">void</span> setup<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    gprsSerial.<span class="me1">begin</span><span class="br0">(</span><span class="nu0">19200</span><span class="br0">)</span><span class="sy0">;</span>
+    delay<span class="br0">(</span><span class="nu0">500</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> loop<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    boolean currBtn <span class="sy0">=</span> digitalRead<span class="br0">(</span>btnPin<span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>prevBtn <span class="sy0">!=</span> currBtn <span class="sy0">&amp;&amp;</span> currBtn <span class="sy0">==</span> HIGH<span class="br0">)</span> <span class="br0">{</span>
+        <span class="co1">//сразу после нажатия кнопки отправляем "тревожное" сообщение по заданному номеру</span>
+        sendTextMessage<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+    prevBtn <span class="sy0">=</span> currBtn<span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="coMULTI">/*
+ * Функция отправки SMS-сообщения
+ */</span>
+<span class="kw4">void</span> sendTextMessage<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="co1">// Устанавливает текстовый режим для SMS-сообщений</span>
+    gprsSerial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"AT+CMGF=1<span class="es1">\r</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+    delay<span class="br0">(</span><span class="nu0">100</span><span class="br0">)</span><span class="sy0">;</span> <span class="co1">// даём время на усваивание команды</span>
+    <span class="co1">// Устанавливаем адресата: телефонный номер в международном формате</span>
+    gprsSerial.<span class="me1">println</span><span class="br0">(</span><span class="st0">"AT + CMGS = <span class="es1">\"</span>+79031034423<span class="es1">\"</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+    delay<span class="br0">(</span><span class="nu0">100</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="co1">// Пишем текст сообщения</span>
+    gprsSerial.<span class="me1">println</span><span class="br0">(</span><span class="st0">"ALARM!"</span><span class="br0">)</span><span class="sy0">;</span>
+    delay<span class="br0">(</span><span class="nu0">100</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="co1">// Отправляем Ctrl+Z, обозначая, что сообщение готово</span>
+    gprsSerial.<span class="me1">println</span><span class="br0">(</span><span class="br0">(</span><span class="kw4">char</span><span class="br0">)</span><span class="nu0">26</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span></pre>
+</dd></dl>
+
+</div>
+
+<h2 class="sectionedit12" id="управление_светодиодами_с_помощью_sms">Управление светодиодами с помощью SMS</h2>
+<div class="level2">
+
+<p>
+Теперь попробуем немного поуправлять устройством с помощью SMS. Для этого соберём  девайс с двумя светодиодами:
+</p>
+
+<p>
+<img src="./Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики]_files/беспроводная-связь-img-gprs_arduino_lights_.jpg" class="media" alt="">
+</p>
+
+<p>
+Сделаем так, чтобы можно было посылать SMS устройству и видеть ответные действия:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>Green on</code> — включается зелёный светодиод</div>
+</li>
+<li class="level1"><div class="li"> <code>Green off</code> — выключается зелёный светодиод</div>
+</li>
+<li class="level1"><div class="li"> <code>Yellow on</code> — включается жёлтый светодиод</div>
+</li>
+<li class="level1"><div class="li"> <code>Yellow off</code> — выключается жёлтый светодиод</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit13" id="необходимые_at-команды2">Необходимые AT-команды</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <code>AT+CMGF=1</code> — устанавливает текстовый режим смс-сообщения</div>
+</li>
+<li class="level1"><div class="li"> <code>AT+IFC=1, 1</code> — устанавливает программный контроль потоком передачи данных </div>
+</li>
+<li class="level1"><div class="li"> <code>AT+CPBS="SM"</code> — открывает доступ к данным телефонной книги SIM-карты</div>
+</li>
+<li class="level1"><div class="li"> <code>AT+CNMI=1,2,2,1,0</code> — включает оповещение о новых сообщениях, новые сообщения приходят в следующем формате: <code>+CMT: "&lt;номер телефона&gt;", "", "&lt;дата, время&gt;"</code>, а на следующей строчке с первого символа идёт содержимое сообщения</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit14" id="код_примера3">Код примера</h3>
+<div class="level3">
+
+<p>
+Будем использовать следующий код:
+</p>
+<dl class="code">
+<dt><a href="http://wiki.amperka.ru/_export/code/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?codeblock=3" title="Скачать код" class="mediafile mf_ino">gprs_lights.ino</a></dt>
+<dd><pre class="code c"><span class="co2">#include &lt;SoftwareSerial.h&gt;</span>
+&nbsp;
+SoftwareSerial gprsSerial<span class="br0">(</span><span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">8</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">//для зелёного светодиода будем использовать второй цифровой вход,</span>
+<span class="co1">//а для жёлтого - третий</span>
+<span class="kw4">int</span> greenPin <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>
+<span class="kw4">int</span> yellowPin <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw4">void</span> setup<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    gprsSerial.<span class="me1">begin</span><span class="br0">(</span><span class="nu0">19200</span><span class="br0">)</span><span class="sy0">;</span>
+    pinMode<span class="br0">(</span>greenPin<span class="sy0">,</span> OUTPUT<span class="br0">)</span><span class="sy0">;</span>
+    pinMode<span class="br0">(</span>yellowPin<span class="sy0">,</span> OUTPUT<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co1">// Настраиваем приём сообщений с других устройств</span>
+    <span class="co1">// Между командами даём время на их обработку</span>
+    gprsSerial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"AT+CMGF=1<span class="es1">\r</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+    delay<span class="br0">(</span><span class="nu0">300</span><span class="br0">)</span><span class="sy0">;</span>
+    gprsSerial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"AT+IFC=1, 1<span class="es1">\r</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+    delay<span class="br0">(</span><span class="nu0">300</span><span class="br0">)</span><span class="sy0">;</span>
+    gprsSerial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"AT+CPBS=<span class="es1">\"</span>SM<span class="es1">\"</span><span class="es1">\r</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+    delay<span class="br0">(</span><span class="nu0">300</span><span class="br0">)</span><span class="sy0">;</span>
+    gprsSerial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"AT+CNMI=1,2,2,1,0<span class="es1">\r</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+    delay<span class="br0">(</span><span class="nu0">500</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+String currStr <span class="sy0">=</span> <span class="st0">""</span><span class="sy0">;</span>
+<span class="co1">// Переменная принимает значение True, если текущая строка является сообщением</span>
+boolean isStringMessage <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw4">void</span> loop<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">!</span>gprsSerial.<span class="me1">available</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span>
+        <span class="kw1">return</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw4">char</span> currSymb <span class="sy0">=</span> gprsSerial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>    
+    <span class="kw1">if</span> <span class="br0">(</span><span class="st0">'<span class="es1">\r</span>'</span> <span class="sy0">==</span> currSymb<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">if</span> <span class="br0">(</span>isStringMessage<span class="br0">)</span> <span class="br0">{</span>
+            <span class="co1">//если текущая строка - SMS-сообщение,</span>
+            <span class="co1">//отреагируем на него соответствующим образом</span>
+            <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">!</span>currStr.<span class="me1">compareTo</span><span class="br0">(</span><span class="st0">"Green on"</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+                digitalWrite<span class="br0">(</span>greenPin<span class="sy0">,</span> HIGH<span class="br0">)</span><span class="sy0">;</span>
+            <span class="br0">}</span> <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">!</span>currStr.<span class="me1">compareTo</span><span class="br0">(</span><span class="st0">"Green off"</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+                digitalWrite<span class="br0">(</span>greenPin<span class="sy0">,</span> LOW<span class="br0">)</span><span class="sy0">;</span>
+            <span class="br0">}</span> <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">!</span>currStr.<span class="me1">compareTo</span><span class="br0">(</span><span class="st0">"Yellow on"</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+                digitalWrite<span class="br0">(</span>yellowPin<span class="sy0">,</span> HIGH<span class="br0">)</span><span class="sy0">;</span>
+            <span class="br0">}</span> <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">!</span>currStr.<span class="me1">compareTo</span><span class="br0">(</span><span class="st0">"Yellow off"</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+                digitalWrite<span class="br0">(</span>yellowPin<span class="sy0">,</span> LOW<span class="br0">)</span><span class="sy0">;</span>
+            <span class="br0">}</span>
+            isStringMessage <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+        <span class="br0">}</span> <span class="kw1">else</span> <span class="br0">{</span>
+            <span class="kw1">if</span> <span class="br0">(</span>currStr.<span class="me1">startsWith</span><span class="br0">(</span><span class="st0">"+CMT"</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+                <span class="co1">//если текущая строка начинается с "+CMT",</span>
+                <span class="co1">//то следующая строка является сообщением</span>
+                isStringMessage <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+            <span class="br0">}</span>
+        <span class="br0">}</span>
+        currStr <span class="sy0">=</span> <span class="st0">""</span><span class="sy0">;</span>
+    <span class="br0">}</span> <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span><span class="st0">'<span class="es1">\n</span>'</span> <span class="sy0">!=</span> currSymb<span class="br0">)</span> <span class="br0">{</span>
+        currStr <span class="sy0">+=</span> String<span class="br0">(</span>currSymb<span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span></pre>
+</dd></dl>
+
+</div>
+
+<h3 class="sectionedit15" id="результат">Результат</h3>
+<div class="level3">
+<iframe src="./Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики]_files/Q1o61ci6XpA.html" height="406" width="520" class="vshare__none" allowfullscreen="" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<h2 class="sectionedit16" id="библиотека_sim900">Библиотека SIM900</h2>
+<div class="level2">
+
+<p>
+Конечно, управлять GPRS-устройством напрямую через AT-команды не всегда удобно. Их по крайней мере постоянно нужно держать в голове. Некоторая функциональность была реализована в <a href="http://code.google.com/p/gsm-shield-arduino/downloads/detail?name=GSM_GPRS_IDE100_v309.zip&can=2&q=" class="urlextern" title="http://code.google.com/p/gsm-shield-arduino/downloads/detail?name=GSM_GPRS_IDE100_v309.zip&amp;can=2&amp;q=" rel="nofollow">библиотеке SIM900</a> доступной на Google Code.
+</p>
+
+<p>
+В ней реализована возможность посылать и принимать звонки и SMS, получать информацию о них, проверять, пришло ли новое сообщение. Вся закадровая AT-коммуникация скрыта в деталях реализации класса, методами которого вы и будете пользоваться.
+</p>
+
+<p>
+Вы можете воспользоваться этой библиотекой, если вам будет достаточно той функциональности, которая в ней предлагается.
+</p>
+
+</div>
+
+<h2 class="sectionedit17" id="включение_gprs_shield_v2">Включение GPRS Shield v2</h2>
+<div class="level2">
+
+<p>
+GPRS Shield ревизии 2 несколько отличается от первой ревизии наличием кнопки Power, включающей и выключающей модуль. После подачи питания на GPRS Shield, для его включения необходимо нажать эту кнопку в течении 2-х секунд. После повторного нажатия плата расширения выключится. 
+</p>
+
+<p>
+Включить модуль можно и программно. Для этого необходимо подать высокий уровень на пин 9 на 3 секунды, а затем подать низкий уровень на эту ножку.
+</p>
+
+<p>
+Пример программного включения модуля:
+</p>
+<dl class="code">
+<dt><a href="http://wiki.amperka.ru/_export/code/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?codeblock=4" title="Скачать код" class="mediafile mf_ino">GPRS_power_On.ino</a></dt>
+<dd><pre class="code C"><span class="kw4">void</span> setup<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+  <span class="co1">//Включаем GPRS Shield, эмулируя нажатие кнопки POWER</span>
+  pinMode<span class="br0">(</span><span class="nu0">9</span><span class="sy0">,</span> OUTPUT<span class="br0">)</span><span class="sy0">;</span>
+  digitalWrite<span class="br0">(</span><span class="nu0">9</span><span class="sy0">,</span> HIGH<span class="br0">)</span><span class="sy0">;</span>    <span class="co1">// Подаем High на пин 9</span>
+  delay<span class="br0">(</span><span class="nu0">3000</span><span class="br0">)</span><span class="sy0">;</span>              <span class="co1">// на 3 секунды</span>
+  digitalWrite<span class="br0">(</span><span class="nu0">9</span><span class="sy0">,</span> LOW<span class="br0">)</span><span class="sy0">;</span>     <span class="co1">// и отпускаем в Low. </span>
+  delay<span class="br0">(</span><span class="nu0">5000</span><span class="br0">)</span><span class="sy0">;</span>              <span class="co1">// Ждём 5 секунд для старта шилда</span>
+<span class="br0">}</span>
+<span class="kw4">void</span> loop<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+  <span class="co1">//Пока ничего больше не делаем</span>
+<span class="br0">}</span></pre>
+</dd></dl>
+
+</div>
+
+                    </article>
+                    <!-- wikipage stop -->
+                                    </div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div id="license">
+      <div class="license">За исключением случаев, когда указано иное, содержимое этой вики предоставляется на условиях следующей лицензии: <bdi><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></bdi></div>      Производные работы должны содержать
+      ссылку на http://wiki.amperka.ru, как на первоисточник, <i>непосредственно перед</i>
+      содержимым работы.<br>
+      Вики работает на суперском движке <a href="http://www.dokuwiki.org/">DokuWiki</a>.
+    </div>
+
+    <div class="docInfo">
+      <bdi>беспроводная-связь/gprs-shield.txt</bdi> · Последние изменения: 2015/04/07 15:00  — <bdi>acos</bdi>
+      <!-- PAGE ACTIONS -->
+      <div id="pagetools">
+          <h3 class="a11y">Инструменты страницы</h3>
+          <div class="tools">
+              <ul>
+                  <li><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?do=edit" class="action source" accesskey="v" rel="nofollow" title="Показать исходный текст [V]"><span>Показать исходный текст</span></a></li><li><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="История страницы [O]"><span>История страницы</span></a></li><li><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?do=backlink" class="action backlink" rel="nofollow" title="Ссылки сюда"><span>Ссылки сюда</span></a></li><li><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Наверх [T]"><span>Наверх</span></a></li>              </ul>
+          </div>
+      </div>
+    </div>
+
+    <div id="wiki-toolset" class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="usertools">
+                <h3 class="a11y">Инструменты пользователя</h3>
+                <ul>
+                    <li><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?do=register" class="action register" rel="nofollow" title="Зарегистрироваться">Зарегистрироваться</a></li><li><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?do=login&sectok=3da475ff3e7c10b45643afab3e9bab78" class="action login" rel="nofollow" title="Войти">Войти</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="sitetools">
+            <!--h3 class="a11y">Инструменты сайта</h3>
+            <div class="mobileTools">
+                <form action="/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="беспроводная-связь:gprs-shield" /><select name="do" class="edit quickselect" title="Инструменты"><option value="">Инструменты</option><optgroup label="Инструменты страницы"><option value="edit">Показать исходный текст</option><option value="revisions">История страницы</option><option value="backlink">Ссылки сюда</option></optgroup><optgroup label="Инструменты сайта"><option value="recent">Недавние изменения</option><option value="media">Управление медиафайлами</option><option value="index">Все страницы</option></optgroup><optgroup label="Инструменты пользователя"><option value="login">Войти</option><option value="register">Зарегистрироваться</option></optgroup></select><button type="submit">&gt;</button></div></form>            </div-->
+            <ul>
+                <li><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Недавние изменения [R]">Недавние изменения</a></li><li><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?do=media&ns=%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C" class="action media" rel="nofollow" title="Управление медиафайлами">Управление медиафайлами</a></li><li><a href="http://wiki.amperka.ru/%D0%B1%D0%B5%D1%81%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C:gprs-shield?do=index" class="action index" accesskey="x" rel="nofollow" title="Все страницы [X]">Все страницы</a></li>            </ul>
+        </div>
+
+    </div>
+</div></div><!-- /footer -->
+
+<!-- Yandex.Metrika -->
+<script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter1777561 = new Ya.Metrika(1777561);
+yaCounter1777561.clickmap(true);
+yaCounter1777561.trackLinks(true);
+} catch(e){}
+</script></div>
+<noscript>&lt;div style="position:absolute"&gt;&lt;img src="//mc.yandex.ru/watch/1777561" alt="" /&gt;&lt;/div&gt;</noscript>
+<!-- /Yandex.Metrika -->
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./Взаимодействие с GSM_GPRS Shield для работы с SMS и голосовыми вызовами [Амперка _ Вики]_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if lte IE 8 ]></div><![endif]-->
+
+
+</body></html>
