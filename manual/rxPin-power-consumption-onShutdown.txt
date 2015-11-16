@@ -1,0 +1,11 @@
+While trying to make it portable I noticed a rather high current consumption after shutdown of the module. Something like 38mA for the GSM Shield + the Olimex low power/industrial version of the UNO(?). 
+http://arduino.cc/en/Reference/GSMShutdown
+
+It seems that the software serial port on the UNO is driving digital pin 3 high. On the UNO side I can measure a voltage of 3.2 volts. On the Quectel pin 61 RXD I measured ~3.0 volts. I assume that IC U5 should be powered with 2.8 volts, not 3.3. I also guess the ESD input protection diodes in the Quectel module is shortcircuting the 3.3 volts down to 2.8 right now. 
+
+After shutdown() I inserted this line of code and Voila! The current is down to ~7 mA (I do have some unneeded pullups and LEDs shining, that will be next!)
+  digitalWrite(3,LOW);
+  
+  
+  
+  http://forum.arduino.cc/index.php?topic=158811.0
